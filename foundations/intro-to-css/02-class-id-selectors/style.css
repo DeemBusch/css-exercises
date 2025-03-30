@@ -1,20 +1,20 @@
 /* CSS for 02-class-id-selectors */
 
-p {
+.odd {
   background-color: hsl(355.6, 100%, 82.7%);
   font-family: Verdana, 'DejaVu Sans', sans-serif;
 }
 
-#line-2 {
+#two {
   color: #0000ff;
   font-size: 36px;
 }
 
-.line-3 {
+.adjust-font-size {
   font-size: 24px;
 }
 
-#line-4 {
+#four {
   font-weight: bold;
   background-color: #90ee90;
   font-size: 24px;
