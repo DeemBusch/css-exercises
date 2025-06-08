@@ -8,81 +8,81 @@ body {
   height: 72px;
   background: darkmagenta;
   color: white;
-  /* my changes - general formatting */
-  justify-content: flex-start;
-  display: flex;
-  font-weight: 900;
-  font-size: 32px;
-  align-items: center;
-  padding-left: 16px;
 }
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
-  /* my changes - center at bottom*/
-  justify-content: center;
-  display: flex;
-  align-items: center;
 }
 
 .sidebar {
   width: 300px;
   background: royalblue;
   box-sizing: border-box;
-  /* my changes - doesn't shrink */
-  display: flex;
-  flex-shrink: 0;
-  align-items: flex-start;
 }
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
-  /* my changes - standardize shape and layout of cards in flex container*/
-  max-width: 200px;
-  max-height: 200px;
-  margin: 16px;
-  padding: 48px;
 }
 
-/* my changes */
+/* SOLUTION */
 
-/* remove dots on list items */
-
-ul {
-  list-style-type: none;
-  padding-left: 0;
+body {
+  display: flex;
+  flex-direction: column; /* this makes header, footer on top,bottom */
 }
 
-/* remove line under links, and format size/color */
-
-a {
-  text-decoration: none;
-  font-size: 24px;
-  color: white;
+.header {
+  display: flex; 
+  align-items: center;
+  padding: 0 16px; /* 0px top/bottom, 16px left/right */
+  font-size: 32px;
+  font-weight: 900;
 }
-
-/* added to make side bar and card container sit side by side */
 
 .body {
+  flex: 1; /* flex-grow:1, flex-shrink: 1, flex-basis: 0 */
   display: flex;
 }
 
-/* div created to make cards universally sized and wrap when screen shrinks */
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 16px;
-  padding: 8px;
+.sidebar {
+  flex-shrink: 0; /* will not shrink */
+  padding: 16px; /* top/right/bottom/left all 16px */
 }
 
-/* adds vertical space between list items */
+ul {
+  list-style-type: none; /* no dots */
+  margin: 0; /* pushes to left */
+  padding: 0;
+}
 
 li {
-  margin: 12px;
+  margin-bottom: 16px; /* adds space between list items */
+}
+
+a {
+  color: white;
+  text-decoration: none; /* removes lines under items */
+  font-size: 24px;
+}
+
+.container {
+  padding: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.card {
+  padding: 16px;
+  width: 300px; /* we need this value to allow flex-wrap to work */
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
