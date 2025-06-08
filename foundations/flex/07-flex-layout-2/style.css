@@ -67,13 +67,13 @@ a {
 
 /* added to make side bar and card container sit side by side */
 
-.container {
+.body {
   display: flex;
 }
 
 /* div created to make cards universally sized and wrap when screen shrinks */
 
-.container-card {
+.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
