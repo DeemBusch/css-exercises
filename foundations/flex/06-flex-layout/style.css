@@ -5,6 +5,9 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  /* my changes */
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -16,6 +19,8 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  /* my changes */
+  padding: 8px 16px;
 }
 
 input {
@@ -23,4 +28,53 @@ input {
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+}
+
+/* my changes */
+
+.header,
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.left-links,
+.right-links {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0; /* Optional: removes the left indentation */
+  gap: 16px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: 16px;
+}
+
+/* removes underline from list */
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+/* adds background color to footer */
+
+.footer {
+  background: #eee;
+}
+
+/* this makes header and footer stick to top/bottom */
+
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 16px
 }
